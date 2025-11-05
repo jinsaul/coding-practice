@@ -1,52 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>
-            Page Title
-        </title>
+        <title>Page Title</title>
+        <link rel="icon" type="image/x-icon" href="./icons8-html-50.png">
+        <style>
+            body {
+                background-color: lightblue;
+                text-align: center;
+            }
+            table {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            p {
+                color: darkblue; /* Example */
+            }
+            .centered-block {
+                display: block;
+                margin-bottom: 20px;
+                margin-left: auto;
+                margin-right: auto; 
+            }
+        </style>
     </head>
-    <body style="background-color: lightblue;text-align:center;">
-        <h1>
-            heading h1
-        </h1>
-        <h2>
-            heading h2
-        </h2>
-        <h3>
-            heading h3
-        </h3>
-        <h4>
-            heading h4
-        </h4>
-        <h5>
-            heading h5
-        </h5>
-        <h6>
-            heading h6
-        </h6>
+    <body>
+        <header id="header">
+            <h1>Header Section</h1>
+            <nav>
+                <a href="#header">Header</a> |
+                <a href="#main">Main</a> |
+                <a href="#footer">Footer</a>
+            </nav>
+        </header>
         <hr>
-        <p>
-            paragraph<br>
-            
-            <a href="https://www.example.com">link to example.com</a><br>
-            <img src="https://www.tutorialspoint.com/html/images/html_images.jpg" alt="good image" width="300"><br>
-            <img src="https://www.example.com/image.jpg" alt="bad image" width="200" height="150"><br>
-            <pre>pre-formatted text 
-            pre   formatted   text</pre>
-            <b>bold text</b> and
-            <i>italic text</i> and
-            <u>underline</u> and
-            <s>strikethrough</s> and
-            <sub>subscript</sub> and 
-            <sup>superscript</sup> and
-            <mark>highlighted</mark> and
-            <small>small</small> and
-            <code>inline code</code><br>
-            <audio controls>
+        <main id="main">        
+            <h1>heading h1</h1>
+            <h2>heading h2</h2>
+            <h3>heading h3</h3>
+            <h4>heading h4</h4>
+            <h5>heading h5</h5>
+            <h6>heading h6</h6>    
+            <pre>pre-formatted text
+                pre   formatted   text</pre>
+            <ul style="list-style-type:none;">
+                <li><a href="https://www.example.com">link to example.com</a></li>
+                <li><strong>bold text</strong></li>
+                <li><em>italic text</em></li>
+                <li><ins>underline</ins></li>
+                <li><del>strikethrough</del></li>
+                <li>normal,<sub>subscript</sub></li>
+                <li>normal,<sup>superscript</sup></li>
+                <li><mark>highlighted</mark></li>
+                <li><small>small</small></li>
+                <li><code>inline code</code></li>
+                <li title="mouse-over text">text with tooltip</li>
+            </ul>
+            <p>
+                paragraph of text <img src="https://www.example.com/image.jpg" alt="bad image" width="200" height="150"><br> and some <button type="button" onclick="alert('Button clicked!')">button text</button> elements in-line
+                <img src="https://www.tutorialspoint.com/html/images/html_images.jpg" alt="good image" width="300"><br>
+            </p>
+            <video class="centered-block" width="320" height="240" controls>
+                <source src="https://www.example.com/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <audio class="centered-block" controls>
                 <source src="https://www.example.com/audio.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
-            </audio><br>
-            <button type="button" onclick="alert('Button clicked!')">Click Me!</button>
-        </p>
+            </audio>
+            <details class="centered-block">
+                <summary>Click to open</summary>
+                This is additional information that can be toggled.
+            </details>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Input field">
+                <button type="submit">Submit</button>
+            </form>
+            <select class="centered-block">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+            </select>
+            <textarea rows="4" cols="30" placeholder="Textarea"></textarea>
+            <table>
+                <caption>
+                    This is a table caption.
+                </caption>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                </tr>
+                <tr>
+                    <td>Data 1</td>
+                    <td>Data 2</td>
+                </tr>
+            </table>
+            <figure>
+                <img src="https://writingcenter.unc.edu/wp-content/uploads/sites/346/2012/07/chart-figure-5.png" alt="Figure Image" width="200">
+                <figcaption>This is a figure with an image and a caption.</figcaption>
+            </figure>
+            <dialog open>
+                <p>This is a dialog element.</p>
+            </dialog><br><br><br><br><br><br>      
+            
+            <script>
+                console.log('This is a script element.');
+            </script>
+            <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+                Your browser does not support the HTML5 canvas tag.
+            </canvas><br>
+        </main>
+        <section>
+        </section>
+        <footer id="footer">
+            footer
+        </footer>
     </body>
 </html>
