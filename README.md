@@ -1,2 +1,2 @@
 HTML practice  
-[preview](https://html-preview.github.io/?url=https://github.com/jinsaul/coding-practice/blob/main/html%20practice.html)
+[preview](https://jinsaul.github.io/coding-practice/html%20practice.html)
