@@ -1,0 +1,314 @@
+<!--comment tag-->
+<!-- 
+TODO:
+form action
+dialog
+canvas
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Necessary for RWD -->
+        <meta name="description" content="A brief description of the page content.">
+        <title>Page Title</title><!-- shown in browser tab title-->
+        <link rel="icon" type="image/x-icon" href="./icons8-html-50.png"><!-- Favicon -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script> <!-- Prism.js for syntax highlighting, 'defer' executes script after html is rendered-->
+        <style>/* Styles, normally pulled from external CSS files */
+            /* Mobile-first: Vertical stacking by default */
+            body {
+                background-color: lightblue;
+                text-align: center;
+                padding: 1rem;
+            }
+            table {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .centered-block {/* Added to <video>, <audio>, etc to make them block elements */
+                display: block;
+                margin-bottom: 20px;
+                margin-left: auto;
+                margin-right: auto; 
+            }
+            .sibling-div {
+                height: 93.4vh;
+                overflow: auto; /* Enable scrolling if content overflows */
+                background: #f4f4f4;
+                margin-bottom: 1rem;
+            }
+            @media (min-width: 768px) {/* Tablet/Desktop View (Media Query) */
+                body {
+                    display: flex; /* Switch to horizontal layout */
+                    gap: 1rem;
+                }
+                .sibling-div {
+                    flex: 1; /* Distribute space evenly */
+                }
+            }
+            /* Prism.js Custom Styles for HTML Syntax Highlighting */
+            .token.comment {color: #6a737d;}/* Comments */
+            .token.tag {color: #22863a;}/* HTML Tags (e.g., <div>, <header>) */
+            .token.attr-name {color: #6f42c1;}/* Attribute Names (e.g., class=, href=, id=) */
+            .token.attr-value, .token.string {color: #032f62;}/* Attribute Values (e.g., "header", "main") */
+            .token.punctuation {color: #444;}/* Punctuation (e.g., <, >, =) */
+        </style>
+    </head>
+    <body>
+        <div class="sibling-div" >
+            <header id="header">
+                <h1>Header Section</h1>
+                <nav>
+                    <a href="#header">Header</a> |
+                    <a href="#main">Main</a> |
+                    <a href="#footer">Footer</a>
+                </nav>
+            </header>
+            <hr><!-- Horizontal Rule -->
+            <main id="main">        
+                <h1>heading h1</h1>
+                <h2>heading h2</h2>
+                <h3>heading h3</h3>
+                <h4>heading h4</h4>
+                <h5>heading h5</h5>
+                <h6>heading h6</h6><br>
+                <pre>pre-formatted text
+                    pre   formatted   text</pre><br>
+                <ul style="list-style-type:none;"><!-- Unordered List with no bullets -->
+                    <li><a href="https://www.example.com">link to example.com</a></li>
+                    <li><strong>bold text</strong></li>
+                    <li><em>italic text</em></li>
+                    <li><ins>underline</ins></li>
+                    <li><del>strikethrough</del></li>
+                    <li>normal,<sub>subscript</sub></li>
+                    <li>normal,<sup>superscript</sup></li>
+                    <li><mark>highlighted</mark></li>
+                    <li><small>small</small></li>
+                    <li><code>inline code</code></li>
+                    <li title="mouse-over text">text with tooltip</li>
+                </ul><br>
+                <p style="color: darkblue;">
+                    blue paragraph of text, <img src="https://www.example.com/image.jpg" alt="a bad image" width="200" height="150"><br>, a <button type="button" onclick="alert('Button clicked!')">button</button>, and a good image in-line
+                    <img src="https://www.tutorialspoint.com/html/images/html_images.jpg" alt="good image" width="300"><br>
+                </p><br>
+                <video class="centered-block" width="320" height="240" controls>
+                    <source src="https://packaged-media.redd.it/2lus4pc24raa1/pb/m2-res_720p.mp4?m=DASHPlaylist.mpd&v=1&e=1693166400&s=d2e97abef49da342389745590f7c6761545181d2#t=0" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video><br>
+                <audio class="centered-block" controls>
+                    <source src="./Lies of P  OST - Fascination.mp3" type="audio/mp4">
+                    Your browser does not support the audio element.
+                </audio><br><br>
+                <details class="centered-block">
+                    <summary>Click to open</summary>
+                    This is additional information that can be toggled.
+                </details><br><br><br>
+                <form>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Input field">
+                    <button type="submit">Submit</button>
+                </form><br><br><br>
+                <select class="centered-block">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select><br><br>
+                <textarea rows="4" cols="30" placeholder="Textarea"></textarea><br><br>
+                <table>
+                    <caption>
+                        This is a table caption.
+                    </caption>
+                    <tr>
+                        <th>Header 1</th>
+                        <th>Header 2</th>
+                    </tr>
+                    <tr>
+                        <td>Data 1</td>
+                        <td>Data 2</td>
+                    </tr>
+                </table><br>
+                <figure>
+                    <img src="https://writingcenter.unc.edu/wp-content/uploads/sites/346/2012/07/chart-figure-5.png" alt="Figure Image" width="200">
+                    <figcaption>This is a figure with an image and a caption.</figcaption>
+                </figure><br>
+                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1479009634&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><br>
+            </main>
+            <footer id="footer">
+                Footer<br><br><br>
+            </footer>
+        </div>
+        <div class="sibling-div" style="text-align: left;">
+            <pre><code class="language-html">    &lt;header id="header"&gt;
+        &lt;h1&gt;Header Section&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;a href="#header"&gt;Header&lt;/a&gt; | &lt;a href="#main"&gt;Main&lt;/a&gt; | &lt;a href="#footer"&gt;Footer&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;hr&gt;&lt;!-- Horizontal Rule --&gt;
+    &lt;main id="main"&gt;    
+
+        &lt;h1&gt;heading h1&lt;/h1&gt;
+
+
+        &lt;h2&gt;heading h2&lt;/h2&gt;
+
+
+        &lt;h3&gt;heading h3&lt;/h3&gt;
+
+
+        &lt;h4&gt;heading h4&lt;/h4&gt;
+
+
+        &lt;h5&gt;heading h5&lt;/h5&gt;
+
+
+        &lt;h6&gt;heading h6&lt;/h6&gt;
+                    
+
+        &lt;pre&gt;pre-formatted text
+            pre   formatted   text&lt;/pre&gt;&lt;br&gt;
+
+
+
+
+        &lt;ul style="list-style-type:none;"&gt;&lt;!-- Unordered List with no bullets --&gt;
+            &lt;li&gt;&lt;a href="https://www.example.com"&gt;link to example.com&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;bold text&lt;/strong&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;em&gt;italic text&lt;/em&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;ins&gt;underline&lt;/ins&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;del&gt;strikethrough&lt;/del&gt;&lt;/li&gt;
+            &lt;li&gt;normal,&lt;sub&gt;subscript&lt;/sub&gt;&lt;/li&gt;
+            &lt;li&gt;normal,&lt;sup&gt;superscript&lt;/sup&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;mark&gt;highlighted&lt;/mark&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;small&gt;small&lt;/small&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;code&gt;inline code&lt;/code&gt;&lt;/li&gt;
+            &lt;li title="mouse-over text"&gt;text with tooltip&lt;/li&gt;
+        &lt;/ul&gt;&lt;br&gt;
+
+        
+
+
+
+        
+        
+
+        
+        
+        &lt;p style="color: darkblue;"&gt;
+            blue paragraph of text, &lt;img src="https://www.example.com/image.jpg" alt="a bad image" width="200" height="150"&gt;&lt;br&gt;,
+            a &lt;button type="button" onclick="alert('Button clicked!')"&gt;button &lt;/button&gt;, and a good image in-line
+            &lt;img src="https://www.tutorialspoint.com/html/images/html_images.jpg" alt="good image" width="300"&gt;&lt;br&gt;
+        &lt;/p&gt;&lt;br&gt;
+        
+        
+        
+        
+        
+
+
+
+
+
+        
+        &lt;video class="centered-block" width="320" height="240" controls&gt;
+            &lt;source src="https://packaged-media.redd.it/2lus4pc24raa1/pb/m2-res_720p.mp4?m=DASHPlaylist.mpd&v=1&e=1693166400&s=d2e97abef49da342389745590f7c6761545181d2#t=0" type="video/mp4"&gt;
+            Your browser does not support the video tag.
+        &lt;/video&gt;&lt;br&gt;
+        
+        
+        
+        
+        
+
+
+
+
+        
+        
+
+        &lt;audio class="centered-block" controls&gt;
+            &lt;source src="./Lies of P  OST - Fascination.mp3" type="audio/mp4"&gt;
+            Your browser does not support the audio element.
+        &lt;/audio&gt;&lt;br&gt;&lt;br&gt;
+
+
+        &lt;details class="centered-block"&gt;
+            &lt;summary&gt;Click to open&lt;/summary&gt;
+            This is additional information that can be toggled.
+        &lt;/details&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+
+        &lt;form&gt;
+            &lt;label for="username"&gt;Username:&lt;/label&gt;
+            &lt;input type="text" id="username" name="username" placeholder="Input field"&gt;
+            &lt;button type="submit"&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+
+        &lt;select class="centered-block"&gt;
+            &lt;option value="option1"&gt;Option 1&lt;/option&gt;&lt;option value="option2"&gt;Option 2&lt;/option&gt;&lt;option value="option3"&gt;Option 3&lt;/option&gt;
+        &lt;/select&gt;&lt;br&gt;&lt;br&gt;
+
+
+
+        &lt;textarea rows="4" cols="30" placeholder="Textarea"&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
+        
+        
+
+        &lt;table&gt;
+            &lt;caption&gt;This is a table caption.&lt;/caption&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Header 1&lt;/th&gt;&lt;th&gt;Header 2&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Data 1&lt;/td&gt;&lt;td&gt;Data 2&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;&lt;br&gt;
+
+
+
+
+        &lt;figure&gt;
+            &lt;img src="https://writingcenter.unc.edu/wp-content/uploads/sites/346/2012/07/chart-figure-5.png" alt="Figure Image" width="200"&gt;
+            &lt;figcaption&gt;This is a figure with an image and a caption.&lt;/figcaption&gt;
+        &lt;/figure&gt;&lt;br&gt;
+        
+        
+        
+        
+        
+
+
+
+    
+        &lt;iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" 
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1479009634&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"&gt;&lt;/iframe&gt;&lt;br&gt;
+    
+    
+    &lt;/main&gt;
+
+    &lt;footer id="footer"&gt;
+        Footer&lt;br&gt;&lt;br&gt;&lt;br&gt;
+    &lt;/footer&gt;</code></pre>
+        </div>
+        <script> // JavaScript to synchronize scrolling of sibling divs
+            const panels = document.querySelectorAll('.sibling-div');
+            panels.forEach(panel => {
+                panel.addEventListener('scroll', (e) => {
+                    const source = e.target;
+                    const sourceMaxScroll = source.scrollHeight - source.clientHeight;
+                    const ratio = sourceMaxScroll > 0 ? source.scrollTop / sourceMaxScroll : 0; // prevent division by zero
+                    panels.forEach(target => {
+                        if (target === source) return;
+                        const targetMaxScroll = target.scrollHeight - target.clientHeight;
+                        const targetPos = ratio * targetMaxScroll;
+                        if (Math.abs(target.scrollTop - targetPos) > 1) { // threshold to prevent jitter
+                            target.scrollTop = targetPos;
+                        }
+                    });
+                }, { passive: true }); // improves scrolling performance
+            });
+        </script>
+    </body>
+</html>
+
